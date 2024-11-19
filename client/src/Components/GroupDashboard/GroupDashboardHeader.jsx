@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 import React, { useEffect, useState } from 'react'
+import { fetchAPI } from '../../utils/api.js';
+
 
 const GroupDashboardHeader = ({ group }) => {
     // console.log(group);
@@ -25,7 +27,7 @@ const GroupDashboardHeader = ({ group }) => {
 
     const getusersname = async (id) => {
         try {
-            const res = await fetch(`api/auth/getusersname/${id}`);
+            const res = await fetchAPI(`api/auth/getusersname/${id}`);
 
             const data = await res.json();
             if (data.success == false) {

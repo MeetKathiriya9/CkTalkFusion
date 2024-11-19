@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import ChatDashboardHeader from './ChatDashboardHeader';
 import io from 'socket.io-client';
 
+import { fetchAPI } from '../../utils/api.js';
+
 // const socket = io("http://localhost:3000");
 
 const socket = io("http://localhost:3000", {
@@ -106,7 +108,7 @@ const ChatDashboard = ({ receiver }) => {
 
         if (!usernames[id]) {  // Only fetch if the username isn’t already in state
             try {
-                const res = await fetch(`api/auth/getusersname/${id}`);
+                const res = await fetchAPI(`api/auth/getusersname/${id}`);
                 const data = await res.json();
 
                 if (data.success == false) {

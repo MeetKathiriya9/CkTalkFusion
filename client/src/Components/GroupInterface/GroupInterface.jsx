@@ -3,6 +3,8 @@ import GroupInterfaceHeader from './GroupInterfaceHeader';
 import GroupDashboard from '../GroupDashboard/GroupDashboard';
 // import ChatInterfaceHeader from './ChatInterfaceHeader'
 // import ChatDashboard from '../ChatDashboard/ChatDashboard';
+import { fetchAPI } from '../../utils/api.js';
+
 
 
 export default function GroupInterface() {
@@ -21,7 +23,7 @@ export default function GroupInterface() {
         // alert("call");
         const fetchUsers = async () => {
             try {
-                const response = await fetch("api/group/getgroups");
+                const response = await fetchAPI("api/group/getgroups");
 
                 const data = await response.json();
                 // const arraydata = Object.values(data);
