@@ -24,7 +24,7 @@ export const createGroup = async (req, res, next) => {
 export const getGroups = async (req, res, next) => {
 
     try {
-        const data = await Group.find();
+        const data = await Group.find({});
 
         if (!data) {
             console.log("error at group", data.message);
