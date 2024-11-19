@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { fetchAPI } from '../utils/api';
+import { fetchAPI } from '../../utils/api.js';
 
 export default function Register() {
 
@@ -40,7 +40,7 @@ export default function Register() {
             }
 
             alert('User registered successfully!');
-            navigate('/login')
+            navigate('/')
 
         } catch (error) {
 

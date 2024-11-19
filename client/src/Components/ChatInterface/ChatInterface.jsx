@@ -3,6 +3,8 @@ import ChatInterfaceHeader from './ChatInterfaceHeader'
 import ChatDashboard from '../ChatDashboard/ChatDashboard';
 // import { fetchAPI } from '../../utils/api.js';
 const apiUrl = import.meta.env.VITE_API_URL;
+import { fetchAPI } from '../../utils/api.js';
+
 
 
 export default function ChatInterface() {
@@ -20,7 +22,7 @@ export default function ChatInterface() {
 
     const fetchUsers = async () => {
       try {
-        const response = await fetch(`https://cktalkfusion-backend.onrender.com/api/auth/getusers`)
+        const response = await fetchAPI("api/auth/getusers")
 
         const data = await response.json();
         const arraydata = Object.values(data);

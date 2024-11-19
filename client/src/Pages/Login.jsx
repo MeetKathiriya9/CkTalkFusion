@@ -3,8 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { StatemgmtAction } from '../Redux/User/UserSlice.js';
 import { useDispatch } from 'react-redux';
 // import { Link } from 'react-router-dom';
-const apiUrl = import.meta.env.VITE_API_URL;
-
+import { fetchAPI } from '../utils/api.js';
 export default function Login() {
 
     const navigate = useNavigate();
@@ -24,7 +23,7 @@ export default function Login() {
 
         try {
             const email = formData.email;
-            const res = await fetch(`https://cktalkfusion-backend.onrender.com/api/auth/getuserdata/${email}`);
+            const res = await fetchAPI(`api/auth/getuserdata/${email}`);
             const data = await res.json();
 
             if (data.success == false) {
@@ -49,7 +48,7 @@ export default function Login() {
         event.preventDefault();
 
         try {
-            const res = await fetch(`https://cktalkfusion-backend.onrender.com/api/auth/login`, {
+            const res = await fetchAPI(`api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
