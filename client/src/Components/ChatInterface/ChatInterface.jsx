@@ -20,7 +20,7 @@ export default function ChatInterface() {
 
     const fetchUsers = async () => {
       try {
-        const response = await fetch(`${apiUrl}/api/auth/getusers`)
+        const response = await fetch(`https://cktalkfusion-backend.onrender.com/api/auth/getusers`)
 
         const data = await response.json();
         const arraydata = Object.values(data);

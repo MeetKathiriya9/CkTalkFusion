@@ -24,7 +24,7 @@ export default function Login() {
 
         try {
             const email = formData.email;
-            const res = await fetch(`${apiUrl}/api/auth/getuserdata/${email}`);
+            const res = await fetch(`https://cktalkfusion-backend.onrender.com/api/auth/getuserdata/${email}`);
             const data = await res.json();
 
             if (data.success == false) {
@@ -49,7 +49,7 @@ export default function Login() {
         event.preventDefault();
 
         try {
-            const res = await fetch(`${apiUrl}/api/auth/login`, {
+            const res = await fetch(`https://cktalkfusion-backend.onrender.com/api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
