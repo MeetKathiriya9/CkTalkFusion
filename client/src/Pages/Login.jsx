@@ -73,7 +73,7 @@ export default function Login() {
 
     return (
         <div className='bg-light-blue h-screen'>
-            <h2 className='text-center pt-36 pb-12 text-4xl font-bold'>Register</h2>
+            <h2 className='text-center pt-36 pb-12 text-4xl font-bold'>Login</h2>
 
             <form onSubmit={handleRegister}>
                 <input
