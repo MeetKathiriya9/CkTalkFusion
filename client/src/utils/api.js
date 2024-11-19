@@ -1,5 +1,6 @@
 // const apiUrl = import.meta.env.VITE_API_URL;
 
+
 // export const fetchData = async (endpoint, options = {}) => {
 //   const response = await fetch(`${apiUrl}${endpoint}`, options);
 //   if (!response.ok) {
@@ -9,8 +10,7 @@
 // };
 
 
-const apiUrl = import.meta.env.VITE_API_URL;
-
+const apiUrl = "https://cktalkfusion-backend.onrender.com";
 // Function to make API calls (optional wrapper)
 export const fetchAPI = async (endpoint, options = {}) => {
   const response = await fetch(`${apiUrl}${endpoint}`, options);
