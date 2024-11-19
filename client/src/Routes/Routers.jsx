@@ -5,7 +5,7 @@ import Register from '../Pages/Register'
 import Login from '../Pages/Login'
 import Group from '../Pages/Group'
 
-export default function routes() {
+export default function Routers() {
   return (
     <>
       

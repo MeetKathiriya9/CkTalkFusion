@@ -1,7 +1,7 @@
 import React from 'react'
-import Routes from '../Routes/routes'
 import Header from './Header'
 import Sidebar from './Sidebar'
+import Routes from '../Routes/Routers'
 
 export default function Layout() {
   return (
