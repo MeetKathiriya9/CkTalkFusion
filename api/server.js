@@ -32,7 +32,8 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173',
+        origin: 'https://cktalkfusion-backend.onrender.com',
+        // origin: 'http://localhost:5173',
         methods: ['GET', 'POST'],
         credentials: true
     }
@@ -42,7 +43,7 @@ app.use(express.json());
 
 // Use CORS middleware
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow only this origin
+    origin: 'https://cktalkfusion-backend.onrender.com', // Allow only this origin
     methods: ['GET', 'POST'], // Allow these methods
     credentials: true
 }));
