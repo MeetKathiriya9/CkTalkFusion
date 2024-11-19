@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { fetchAPI } from '../utils/api';
 
 export default function Register() {
 
@@ -22,7 +23,7 @@ export default function Register() {
         // console.log(formData);
 
         try {
-            const res = await fetch("api/auth/add", {
+            const res = await fetchAPI("api/auth/add", {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
