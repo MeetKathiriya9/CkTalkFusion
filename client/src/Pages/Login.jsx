@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { StatemgmtAction } from '../Redux/User/UserSlice.js';
 import { useDispatch } from 'react-redux';
 // import { Link } from 'react-router-dom';
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export default function Login() {
 
@@ -23,7 +24,7 @@ export default function Login() {
 
         try {
             const email = formData.email;
-            const res = await fetch(`api/auth/getuserdata/${email}`);
+            const res = await fetch(`${apiUrl}/api/auth/getuserdata/${email}`);
             const data = await res.json();
 
             if (data.success == false) {
@@ -48,7 +49,7 @@ export default function Login() {
         event.preventDefault();
 
         try {
-            const res = await fetch("api/auth/login", {
+            const res = await fetch(`${apiUrl}/api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
