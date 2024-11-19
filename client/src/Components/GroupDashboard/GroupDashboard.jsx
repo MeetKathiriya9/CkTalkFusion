@@ -6,7 +6,7 @@ import { fetchAPI } from '../../utils/api.js';
 
 
 
-const socket = io("http://localhost:3000", {
+const socket = io("https://cktalkfusion-backend.onrender.com", {
     transports: ["websocket"],
 });
 

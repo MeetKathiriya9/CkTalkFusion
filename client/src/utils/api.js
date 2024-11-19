@@ -10,7 +10,7 @@
 // };
 
 
-const apiUrl = "https://cktalkfusion-backend.onrender.com";
+const apiUrl = "https://cktalkfusion-backend.onrender.com/";
 // Function to make API calls (optional wrapper)
 export const fetchAPI = async (endpoint, options = {}) => {
   const response = await fetch(`${apiUrl}${endpoint}`, options);
