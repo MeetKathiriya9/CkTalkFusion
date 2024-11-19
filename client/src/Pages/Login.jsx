@@ -33,14 +33,15 @@ export default function Login() {
 
             dispatch(StatemgmtAction.StoreCurrentUser(data.user));
             localStorage.setItem("currentUser", JSON.stringify(data.user));  // Save to localStorage
-
+            console.log(localStorage.setItem("currentUser", JSON.stringify(data.user)));
+            
             // console.log("current data of user", data.user);
 
 
         } catch (error) {
             console.error("error at getuserdata: ", error);
         }
-    }
+    }   
 
     const handleRegister = async (event) => {
         setError("");
