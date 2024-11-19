@@ -19,7 +19,7 @@ export const fetchAPI = async (endpoint, options = {}) => {
     throw new Error(`API call failed: ${response.statusText}`);
   }
 
-  return response.json(); // Parse JSON response
+  return response; // Parse JSON response
 };
 
 export default apiUrl;
